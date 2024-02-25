@@ -14,7 +14,13 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        'xx': '1280px', 
+        'gr': '1024px', 
+        'me': '768px',
+        'pe': '300px',   // Small screens
+           // Medium screens
+         // Large screens
+         // Extra large screens
       },
     },
     extend: {
