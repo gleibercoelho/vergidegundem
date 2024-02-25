@@ -94,7 +94,7 @@ export function MenubarDemo() {
                             <MenubarItem>İndirimli Kurumlar Vergisi</MenubarItem>
                             <MenubarItem>EY Vergi Rehberi</MenubarItem>
                             <MenubarItem>Ar-Ge ve Tasarım Faaliyetlerine Sağlanan Destek ve Teşvikler</MenubarItem>
-                            <MenubarItem>20 Soruda Türkiye'de Yeni Transfer Fiyatlandırması Dokümantasyon Yükümlülüğü</MenubarItem>
+                            <MenubarItem>20 Soruda Türkiye de Yeni Transfer Fiyatlandırması Dokümantasyon Yükümlülüğü</MenubarItem>
                             <MenubarItem>Varlık Barışı</MenubarItem>
                             <MenubarItem>Katma Değer Vergisi Tevkifatı</MenubarItem>
                             <MenubarItem>Yeni Türk Ticaret Kanunu</MenubarItem>
