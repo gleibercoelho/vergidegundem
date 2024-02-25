@@ -18,7 +18,8 @@ import {
 export function ModeToggle() {
   const { setTheme } = useTheme()
 
-  const buttonRef = useRef(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
 
   useEffect(() => {
       // Verifica se o botão existe

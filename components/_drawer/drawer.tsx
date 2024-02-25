@@ -17,7 +17,8 @@ import {
 
 export function DrawerDemo() {
 
-    const buttonRef = useRef(null);
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
 
     useEffect(() => {
         // Verifica se o botão existe
