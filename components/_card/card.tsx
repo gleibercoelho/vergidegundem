@@ -22,13 +22,13 @@ type CardProps = React.ComponentProps<typeof Card>
 
 export function CardDemo({ className, ...props }: CardProps) {
     return (
-        <Card className={cn("w-[80%] sm:w-[100%]", className)} {...props}>
+        <Card className={cn("w-[80%]", className)} {...props}>
             <CardHeader>
                 <div className="flex flex-row justify-between m-2 text-12">
                 <CardTitle className="text-sm">No: 24</CardTitle>
                 <CardTitle className="text-sm">Tarih: 20/02/2024</CardTitle>
                 </div>
-                <CardTitle className="mt-6" >Konu: Enflasyon düzeltmesine ilişkin açıklamaların yer aldığı Sirküler yayımlandı.</CardTitle>
+                <CardTitle className="mt-6 underline cursor-pointer" >Konu: Enflasyon düzeltmesine ilişkin açıklamaların yer aldığı Sirküler yayımlandı.</CardTitle>
 
             </CardHeader>
             <CardContent className="grid gap-4 text-justify text-base" >
@@ -42,7 +42,7 @@ export function CardDemo({ className, ...props }: CardProps) {
                     20 Şubat 2024 tarihinde Gelir İdaresi Başkanlığının (GİB) internet sitesinde yayımlanan 165 numaralı Sirküler’de; 2023 hesap dönemi sonuna ait bilançonun enflasyon düzeltmesi işlemlerinde kullanılacak ortalama ticari kredi faiz oranları belirlenmiş ayrıca enflasyon düzeltmesi uygulamasına yönelik bazı hususlara ilişkin örnek hesaplamalara da yer verilmek suretiyle açıklamalar yapılmıştır.
                     <br></br>
                     <br></br>
-                    <a href="#">165 numaralı Sirkülere ulaşmak için tıklayınız...</a>
+                    <a href="#" className="text-cyan-600 cursor-pointer">165 numaralı Sirkülere ulaşmak için tıklayınız...</a>
                 
             </CardContent>
             <CardFooter>

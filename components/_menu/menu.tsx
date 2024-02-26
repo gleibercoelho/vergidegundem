@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Menubar,    
     MenubarContent,
@@ -17,7 +19,7 @@ import { BsFileBarGraphFill } from "react-icons/bs";
 import { FaPaperclip } from "react-icons/fa6";
 import { BsCalculatorFill } from "react-icons/bs";
 import { IoChatboxEllipses } from "react-icons/io5";
-
+import { useState, useEffect } from 'react';
 
 
 
@@ -26,10 +28,26 @@ import { IoChatboxEllipses } from "react-icons/io5";
 
 
 export function MenubarDemo() {
+    const [isWideScreen, setIsWideScreen] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsWideScreen(window.innerWidth < 1056);
+        };
+
+        // Adiciona um ouvinte para o evento de redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Remove o ouvinte quando o componente é desmontado para evitar vazamentos de memória
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <Menubar className="mt-3 rounded-none flex flex-wrap">
-            <MenubarMenu>
-                <MenubarTrigger><FaUserFriends style={{color: "rgb(36, 34, 20)" }} /> Hakkımızda</MenubarTrigger>
+        <div style={{ display: isWideScreen ? 'none' : 'block' }}>
+        <Menubar className="rounded-none flex flex-wrap">
+            <MenubarMenu >
+                <MenubarTrigger><FaUserFriends style={{color: "rgb(255,230,0)" }} /> Hakkımızda</MenubarTrigger>
                 <MenubarContent className="flex p-4 gap-4">
                     <MenubarItem>
                         <Image src="/hizmet.png" width={200} height={100} alt="" />
@@ -76,7 +94,7 @@ export function MenubarDemo() {
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
-                <MenubarTrigger> <FaStar style={{color: "rgb(255,230,0)" }}/> E-Dergi</MenubarTrigger>
+                <MenubarTrigger> </MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem inset>Vergide Gündem</MenubarItem>
                     <MenubarSeparator />
@@ -154,5 +172,6 @@ export function MenubarDemo() {
             </MenubarMenu>
 
         </Menubar>
+        </div>
     )
 }
