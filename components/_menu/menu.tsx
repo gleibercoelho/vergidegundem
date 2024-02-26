@@ -28,11 +28,11 @@ import { useState, useEffect } from 'react';
 
 
 export function MenubarDemo() {
-    const [isWideScreen, setIsWideScreen] = useState(true);
+    const [isWideScreenTwo, setIsWideScreenTwo] = useState(true);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsWideScreen(window.innerWidth < 1055);
+            setIsWideScreenTwo(window.innerWidth < 1055 || window.innerWidth == 1055);
         };
 
         // Adiciona um ouvinte para o evento de redimensionamento da janela
@@ -44,7 +44,7 @@ export function MenubarDemo() {
         };
     }, []);
     return (
-        <div style={{ display: isWideScreen ? 'none' : 'block' }}>
+        <div style={{ display: isWideScreenTwo ? 'none' : 'block' }}>
         <Menubar className="rounded-none flex flex-wrap">
             <MenubarMenu >
                 <MenubarTrigger><FaUserFriends style={{color: "rgb(255,230,0)" }} /> Hakkımızda</MenubarTrigger>
