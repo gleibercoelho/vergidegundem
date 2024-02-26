@@ -32,17 +32,23 @@ export function MenubarDemo() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsWideScreenTwo(window.innerWidth < 1055 || window.innerWidth == 1055);
+            setIsWideScreenTwo(window.innerWidth < 1055 || window.innerWidth === 1055);
         };
-
-        // Adiciona um ouvinte para o evento de redimensionamento da janela
+    
+        // Adiciona ouvintes para os eventos de redimensionamento da janela e carregamento da página
         window.addEventListener('resize', handleResize);
-
-        // Remove o ouvinte quando o componente é desmontado para evitar vazamentos de memória
+        window.addEventListener('load', handleResize); // Adiciona um ouvinte para o evento de carregamento da página
+    
+        // Chamada inicial para definir o estado com base na largura da janela
+        handleResize();
+    
+        // Remove os ouvintes quando o componente é desmontado para evitar vazamentos de memória
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('load', handleResize); // Remove o ouvinte de carregamento da página
         };
     }, []);
+    
     return (
         <div style={{ display: isWideScreenTwo ? 'none' : 'block' }}>
         <Menubar className="rounded-none flex flex-wrap">

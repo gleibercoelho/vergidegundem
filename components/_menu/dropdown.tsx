@@ -36,10 +36,13 @@ export function DropdownMenuDemo() {
 
         // Adiciona um ouvinte para o evento de redimensionamento da janela
         window.addEventListener('resize', handleResize);
+        window.addEventListener('load', handleResize);
 
+        
         // Remove o ouvinte quando o componente é desmontado para evitar vazamentos de memória
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('load', handleResize);
         };
     }, []);
     return (
