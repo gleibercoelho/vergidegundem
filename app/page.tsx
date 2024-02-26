@@ -45,7 +45,7 @@ export default function Home() {
           <CardDemo style={{ backgroundColor: "rgb(46,46,56)" }} />
           <SheetDemo />
         </div>
-        <div className="flex flex-row flex-wrap justify-around mt-7">
+        <div className="flex flex-row flex-wrap justify-around mt-7" style={{ backgroundColor: "rgb(0,0,0)" }}>
         <ComboboxDemo/>
         <ComboboxDemoSnd/>
         <ComboboxDemoTrd/>
