@@ -32,7 +32,7 @@ export function MenubarDemo() {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsWideScreen(window.innerWidth < 1056);
+            setIsWideScreen(window.innerWidth < 1055);
         };
 
         // Adiciona um ouvinte para o evento de redimensionamento da janela
