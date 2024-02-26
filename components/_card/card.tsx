@@ -53,7 +53,7 @@ Erkan Baykuş  <br></br>
 <br></br>
 Yukarıda yer verilen açıklamalarımız, konuya ilişkin genel bilgiler içermektedir. EY ve/veya Kuzey YMM ve Bağımsız Denetim A.Ş.’ye, işbu dokümanın içeriğinden kaynaklanan veya içeriğine ilişkin olarak ortaya çıkan sonuçlardan dolayı herhangi bir sorumluluk iddiasında bulunulamaz.
             </CardFooter>
-            <div  className="flex flex-row justify-between m-2 flex-wrap">
+            <div  className="flex flex-row justify-between m-2 pt-5 flex-wrap">
                 <Button> <FaDownload className="m-1"/> Dosyayı İndir</Button>
                 <Button> <FaPrint className="m-1"/> Baskıya yolla</Button>
                 <Button> <IoMdArrowBack className="m-1"/> Başa Dön</Button>
